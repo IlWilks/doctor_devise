@@ -44,6 +44,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'semantic-ui-sass'
 end
 
 group :test do
