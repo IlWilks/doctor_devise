@@ -1,35 +1,34 @@
-<h1><%= @patient.name %>: Appointments</h1>
-<%= link_to 'Add Appointment', new_course_enrollment_path(@course) %>
+<h1>Doctor <%= @doctor.name %>: Appointments</h1>
+<%= link_to 'Add Appointment', new_doctor_appointment_path(@doctor) %>
 <hr />
 
-<h2>Teacher</h2>
+<h2>Heart</h2>
 <ul>
-  <% @teachers.each do |teacher| %>
+  <% @hearts.each do |heart| %>
     <li>
-      <%= teacher.user.full_name %>
+      <%= heart.patient.full_name %>
       <br />
-      <%= link_to 'Remove', course_enrollment_path(@course, teacher), method: :delete %>
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, heart), method: :delete %>
     </li>
   <% end %>
 </ul>
-<h2>Ta</h2>
+<h2>Butt</h2>
 <ul>
-  <% @tas.each do |ta| %>
+  <% @butts.each do |butt| %>
     <li>
-      <%= ta.user.full_name %>
+      <%= butt.patient.full_name %>
       <br />
-      <%= link_to 'Remove', course_enrollment_path(@course, ta), method: :delete %>
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, butt), method: :delete %>
     </li>
  <% end %>
 </ul>
-<h2>Student</h2>
+<h2>Cold</h2>
 <ul>
-  <% @students.each do |student| %>
+  <% @colds.each do |cold| %>
     <li>
-      <%= student.user.full_name %>
+      <%= cold.patient.full_name %>
       <br />
-      <%= link_to 'Remove', course_enrollment_path(@course, student), method: :delete %>
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, cold), method: :delete %>
    </li>
  <% end %>
 </ul>
-

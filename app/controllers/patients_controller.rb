@@ -26,8 +26,6 @@ class PatientsController < ApplicationController
       @patient = Patient.find(params[:id])
       @patient.destroy
       redirect_to patients_path 
-      # when it's destroyed instead of redirecting you to that patient (since s/he is gone) like in the create method, this'll take you back to
-      # the list of all the patients
     end
   
     private
