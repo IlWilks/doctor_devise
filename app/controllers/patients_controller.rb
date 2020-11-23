@@ -1,5 +1,5 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :destroy]
+  #before_action :set_patient, only: [:show, :destroy]
   
     def index
       @patients = Patient.all
@@ -29,7 +29,7 @@ class PatientsController < ApplicationController
     end
   
     private
-  
+
     def patient_params
       params.require(:patient).permit(:first_name, :last_name)
     end
